@@ -21,3 +21,10 @@ RUN apt-get install -y build-essential ccache
 
 ENV NDK_CCACHE $(which ccache)
 
+# install Python
+RUN apt-get install -y python3 python3-pip
+
+# install Fabric
+RUN pip3 install fabric
+
+
