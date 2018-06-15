@@ -22,9 +22,11 @@ RUN apt-get install -y build-essential ccache
 ENV NDK_CCACHE $(which ccache)
 
 # install Python
-RUN apt-get install -y python3 python3-pip
+RUN apt-get install -y python3 python3-pip libssl-dev
 
-# install Fabric
-RUN pip3 install fabric
+# install swig (used for resource encryption) 
+RUN apt-get install -y swig
 
+# install awscli
+RUN pip3 install awscli 'pyopenssl>=17.2.0' 'pycrypto>=2.6.1' 'm2crypto>=0.26.0'
 
