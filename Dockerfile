@@ -21,3 +21,9 @@ RUN apt-get install -y build-essential ccache
 
 ENV NDK_CCACHE $(which ccache)
 
+# install Python
+RUN apt-get install -y python python-pip libssl-dev
+
+# install awscli
+RUN pip install awscli
+
