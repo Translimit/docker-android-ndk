@@ -1,5 +1,8 @@
 FROM runmymind/docker-android-sdk:latest
 
+# update android-sdk
+RUN su - android -c "/opt/android-sdk-linux/tools/bin/sdkmanager 'build-tools;27.0.2' 'platforms;android-27'"
+
 # install android-ndk
 ARG ANDROID_NDK_VERSION=r17b
 ENV ANDROID_NDK_HOME /opt/android-ndk-${ANDROID_NDK_VERSION}
