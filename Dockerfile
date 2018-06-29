@@ -30,6 +30,9 @@ RUN apt-get install -y swig
 # install zip
 RUN apt-get install -y zip
 
+# install nfs-common
+RUN apt-get install -y nfs-common
+
 # install awscli
 RUN pip install awscli 'pyopenssl>=17.2.0' 'pycrypto>=2.6.1' 'm2crypto>=0.26.0'
 
