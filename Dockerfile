@@ -24,6 +24,12 @@ ENV NDK_CCACHE $(which ccache)
 # install Python
 RUN apt-get install -y python python-pip libssl-dev
 
+# install zip
+RUN apt-get install -y zip
+
+# install nfs-common
+RUN apt-get install -y nfs-common
+
 # install awscli
 RUN pip install awscli
 
