@@ -14,7 +14,13 @@ ENV PATH $PATH:$ANDROID_NDK_HOME
 
 # install ccache
 RUN apt-get update
-RUN apt-get install -y build-essential ccache nfs-common
+RUN apt-get install -y build-essential ccache
+
+# install nfs
+RUN apt-get install -y nfs-common
+
+# install python
+RUN apt-get install -y python-pip
 
 ENV NDK_CCACHE $(which ccache)
 
