@@ -22,5 +22,8 @@ RUN apt-get install -y nfs-common
 # install python
 RUN apt-get install -y python-pip
 
+# install rsync
+RUN apt-get install -y rsync
+
 ENV NDK_CCACHE $(which ccache)
 
