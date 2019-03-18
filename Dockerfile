@@ -20,7 +20,9 @@ RUN apt-get install -y build-essential ccache
 RUN apt-get install -y nfs-common
 
 # install python
-RUN apt-get install -y python-pip
+RUN apt-get install -y python-pip rsync
+RUN pip install awscli requests pytz jinja2
+RUN pip install fabric==1.13.1
 
 ENV NDK_CCACHE $(which ccache)
 
