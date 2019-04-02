@@ -24,5 +24,8 @@ RUN apt-get install -y python-pip rsync
 RUN pip install awscli requests pytz jinja2
 RUN pip install fabric==1.13.1
 
+# install zip
+RUN apt-get install -y zip unzip
+
 ENV NDK_CCACHE $(which ccache)
 
